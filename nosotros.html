@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        button {
+            background-color: gray;
+            animation: 0.1s extend;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        @keyframes extend {
+            0% {
+                transform: scale(0%,0%);
+            }
+            100% {
+                transform: scale(50%,50%);
+            }
+        }
+        a {
+            text-decoration: none;            
+        }
+
+        a:hover {
+            background-color: brown;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <header class="container bg-secondary">
+        <div class="row justify-content-evenly">
+            <a href="/index.html" class="col-auto p-4 text-light">Dashboard</a>
+            <a href="/nosotros.html" class="col-auto p-4 text-light">Nosotros</a>
+            <a href="/vision.html" class="col-auto p-4 text-light">Vision</a>
+        </div>
+    </header>
+    <div class="container mt-4">
+        <div class="row justify-content-center mb-3">
+            <div class="col-auto">
+                <h1 class="text-primary fw-bold">Nosotros</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-3">
+            <div class="col-auto">
+                <p class="text-success">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, eius blanditiis commodi rerum vel, quidem itaque nihil magni a quaerat odio corporis, autem adipisci hic quisquam laborum cum tempora molestias?</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <button id="btn-dark-mode" class="col-auto" onclick="changeMode()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script>
+        let click = true;
+        const changeMode = () => {
+            if (click) {
+                document.body.classList.remove('bg-light');
+                document.body.classList.add('bg-dark');
+                click = false
+            } else {
+                document.body.classList.remove('bg-dark');
+                document.body.classList.add('bg-light');
+                click = true
+            }
+            
+        }
+    </script>
+</body>
+</html>
